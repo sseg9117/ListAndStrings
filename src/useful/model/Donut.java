@@ -10,7 +10,22 @@ public class Donut
 	
 	public Donut()
 	{
+		this.flavor = "plain";
+		this.shape = "round";
+		this.holeCount = 1;
+		this.hasSprinkles = false;
+		this.isGlazed = false;
 		
 	}
-	
+	public Donut(String flavor)
+	{
+		this();
+		this.flavor = flavor;	
+	}
+	public Donut(boolean isGlazed)
+	{
+		this();
+		this.isGlazed =isGlazed;
+				
+	}
 }
