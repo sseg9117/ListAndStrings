@@ -48,10 +48,10 @@ public class ListStringController
 			donutList.add(clusterFilled);
 		}
 		
-		public String toString()
-		{
-			String description = "this donut is a" + flavor + " Donut";
-			
-			return description;
-		}
+//		public String toString()
+//		{
+//			String description = "this donut is a" + flavor + " Donut";
+//			
+//			return description;
+//		}
 }
