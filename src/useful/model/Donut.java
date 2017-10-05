@@ -22,10 +22,32 @@ public class Donut
 		this();
 		this.flavor = flavor;	
 	}
+	public String toString()
+	{
+		String description = "This donut is a " + flavor + " donut";
+		
+		return description;
+	}
 	public Donut(boolean isGlazed)
 	{
 		this();
 		this.isGlazed =isGlazed;
 				
 	}
+	
+	public String getShape()
+	{
+		return shape;
+	}
+	
+	public void setShape(String shape)
+	{
+		this.shape = shape;
+	}
+	
+	public String getFlavor()
+	{
+		return flavor;
+	}
+	
 }

@@ -23,13 +23,35 @@ public class ListStringController
 //			System.out.println(donutList);
 			donutList.add(temp); // you can put temp here instead of new donut because of ^
 			fillTheList();
+			showTheList();
 			
 		}
+		
 		private void showTheList()
 		{
+			String favorite = "Mapel with coffee";
+			
 			for (int index = 0; index < donutList.size(); index += 1)
 			{
+				String currentFlavor = donutList.get(index).getFlavor();//same as
+				
+				Donut currentDonut = donutList.get(index);// this and 
+				String flavor = currentDonut.getFlavor();//this
+				
+				if (currentFlavor.equals(favorite))
+				{
+					for (int woop = 0; woop < 5; woop += 1)
+					{
+						display.displayText("The best flavor ever!!!!!");
+								
+					}
+				}
+				for (int currentLetterIndex = 0; currentLetterIndex < currentFlavor.length(); currentLetterIndex += 1)
+				{
+					display.displayText(currentFlavor.substring(currentLetterIndex, currentLetterIndex + 1));
+				}
 				display.displayText(donutList.get(index).toString());
+				
 			}
 		}
 		
