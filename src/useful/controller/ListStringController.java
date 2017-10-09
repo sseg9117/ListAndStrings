@@ -23,7 +23,9 @@ public class ListStringController
 //			System.out.println(donutList);
 			donutList.add(temp); // you can put temp here instead of new donut because of ^
 			fillTheList();
-			showTheList();
+//			showTheList();
+			changeTheList();
+			practiceWithList();
 			
 		}
 		
@@ -55,6 +57,8 @@ public class ListStringController
 			}
 		}
 		
+
+		
 		private void fillTheList()
 		{
 			Donut jellyFilled = new Donut("Jelly Filled");
@@ -69,6 +73,41 @@ public class ListStringController
 			donutList.add(trashDonut);
 			donutList.add(clusterFilled);
 		}
+		
+		private void changeTheList()
+		{
+			display.displayText("The list is this big: " + donutList.size());
+			Donut removed = donutList.remove(0);
+			display.displayText(removed.getFlavor() + "was removed from the list");
+			display.displayText("Now it is this big: " + donutList.size());
+			donutList.add(removed);
+				
+			display.displayText("The list is still contains: " + donutList.size() + " items.");
+			removed = donutList.set(3, new Donut());
+			display.displayText("The donut with flavor " + removed.getFlavor() + " has been removed");
+			
+		}
+			//practice
+		private void practiceWithList()
+		{
+
+			display.displayText("The list is now this big: " + donutList.size());
+			Donut removed = donutList.remove(0);
+			display.displayText(removed.getShape() + "was removed form list");
+			display.displayText("The list is now " + donutList.size());
+			donutList.add(2, removed);
+
+			Donut creamFilled = new Donut("Cream Donut");
+			donutList.add(creamFilled);
+			
+			for (Donut number : donutList) 
+			{
+				System.out.println("Number = " + number);
+			}
+			listDonut<Donut> fwd = classes.listDonut(idx);
+			
+		}
+		
 		
 //		public String toString()
 //		{
