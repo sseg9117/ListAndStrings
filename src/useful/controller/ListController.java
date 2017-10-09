@@ -6,12 +6,12 @@ import useful.model.Donut;
 import useful.view.PopupDisplay;
 
 
-public class ListStringController
+public class ListController
 {
 	private List<Donut> donutList; //This declares the list
 	private PopupDisplay display;
 	
-	public ListStringController()
+	public ListController()
 	{
 		donutList = new ArrayList<Donut>();// This initializes the list
 		display = new PopupDisplay();
@@ -111,6 +111,20 @@ public class ListStringController
 			}
 			
 		}
+		
+		public ArrayList<Donut> getDonutList()
+		{
+			return (ArrayList<Donut>) donutList;
+		}
+		
+		public PopupDisplay getDisplay()
+		{
+			return display;
+		}
+		
+		
+		
+		
 		
 		
 //		public String toString()
