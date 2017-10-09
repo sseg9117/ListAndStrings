@@ -104,7 +104,11 @@ public class ListStringController
 			{
 				System.out.println("Number = " + number);
 			}
-			listDonut<Donut> fwd = classes.listDonut(idx);
+			
+			for (int index = donutList.size() - 1; index >=0; index -=1)	
+			{
+				display.displayText(donutList.get(index).getFlavor());
+			}
 			
 		}
 		
